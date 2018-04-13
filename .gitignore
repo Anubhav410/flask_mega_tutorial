@@ -1,5 +1,4 @@
 *.pyc
 venv
 *.swp
-logs/*
-*.log
+logs/
