@@ -5,4 +5,5 @@ flask-migrate
 flask-login
 flask-mail
 pyjwt
+flask-bootstrap
 

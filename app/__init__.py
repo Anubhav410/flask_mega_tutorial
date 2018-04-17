@@ -7,6 +7,7 @@ import os
 from logging.handlers import RotatingFileHandler
 import logging
 from flask_mail import Mail
+from flask_bootstrap import Bootstrap
 
 
 app = Flask(__name__)
@@ -15,8 +16,8 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
-
 mail = Mail(app)
+bootstrap = Bootstrap(app)
 
 
 if not os.path.exists('logs'):

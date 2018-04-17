@@ -25,7 +25,7 @@ def index():
         post = Post(body=form.post.data, author=current_user)
         db.session.add(post)
         db.session.commit()
-        flash('Your post is not live!')
+        flash('Your post is now live!')
         return redirect(url_for('index'))
 
     posts = current_user.followed_posts().paginate(page ,app.config['POSTS_PER_PAGE'], False)
