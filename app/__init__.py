@@ -8,6 +8,7 @@ from logging.handlers import RotatingFileHandler
 import logging
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 
 app = Flask(__name__)
@@ -18,6 +19,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 
 if not os.path.exists('logs'):
